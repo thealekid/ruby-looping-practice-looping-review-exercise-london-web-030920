@@ -3,6 +3,7 @@ require_relative './spec_helper'
 describe 'Loops' do
   before(:each) do
     @looping_string = "Welcome to Flatiron School's Web Development Course!\nWelcome to Flatiron School's Web Development Course!\nWelcome to Flatiron School's Web Development Course!\nWelcome to Flatiron School's Web Development Course!\nWelcome to Flatiron School's Web Development Course!\nWelcome to Flatiron School's Web Development Course!\nWelcome to Flatiron School's Web Development Course!\n"
+    @looping_string_2 = "Welcome to Flatiron School's Web Development Course!\nWelcome to Flatiron School's Web Development Course!\n"
   end
 
   describe 'loop' do
@@ -14,6 +15,7 @@ describe 'Loops' do
   describe 'times' do
     it "prints out Welcome to Flatiron School\'s Web Development Course! 7 times" do
       expect{ times_iterator(7) }.to output(@looping_string).to_stdout
+      expect{ times_iterator(2) }.to output(@looping_string_2).to_stdout
     end
   end
 
